@@ -1,0 +1,139 @@
+.top{
+    width: 100%;
+    height: 100rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    background-color: white;
+    border-top: 1rpx solid rgb(240, 240, 240);
+}
+.select-box{
+    width: 78%;
+    height: 90%;
+    background-color: rgb(241, 241, 241);
+    border-radius: 15rpx;
+    display: flex;
+    align-items: center;
+    padding-left: 20rpx;
+}
+.select-box image{
+    width: 32rpx;
+    height: 32rpx;
+}
+.select-box-txt{
+    font-size: 30rpx;
+    color: rgb(0, 0, 0);
+    margin-left: 20rpx;
+}
+.select{
+    font-size: 32rpx;
+    font-weight:bolder;
+    color: orange;
+    width: 15%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.choose-list{
+    width: 100%;
+    height: 80rpx;
+    display: flex;
+    
+}
+.choose{
+    font-size: 32rpx;
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: 1rpx solid rgb(236, 234, 234);
+}
+.choose image{
+    width: 32rpx;
+    height: 32rpx;
+    padding-left: 10rpx;
+}
+/*活动列表*/
+
+.activities-list{
+    width: 100%;
+}
+.activities-box{
+    width: 100%;
+    padding: 2%;
+    border-bottom: 1rpx solid rgb(189, 189, 189);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #fff;
+}
+.projectImageView{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.right{
+    width: 65%;
+    height: 80%;
+    margin-left: 2%;
+}
+
+.image{
+    width: 230rpx;
+    height: 150rpx;
+    border-radius: 20rpx;
+}
+
+  /* 活动名 */
+.projectNameView{
+    width: 100%;
+    font-size: 34rpx;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.down{
+    margin-top: 2%;
+    width: 100%;
+    font-size: 30rpx;
+    display: flex;
+    flex-direction: row;
+    color: rgb(102, 102, 102);
+}
+.organization{
+    margin-top: 2%;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.projectStartDateView{
+    width: 80%;
+}
+
+.projectEndDateView{
+    width: 20%;
+}
+
+.projectEndDateView image{
+    width: 32rpx;
+    height: 32rpx;
+}
+.nullProject{
+    width: 100%;
+    height: 500rpx;
+    color: rgb(155, 155, 155);
+    opacity: 0.8;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}

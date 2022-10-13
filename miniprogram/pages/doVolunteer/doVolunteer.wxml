@@ -1,0 +1,76 @@
+<view class="top">
+    <view class="select-box">
+    <image src="/images/select.png"></image>
+    <view class="select-box-txt" >
+        <input class="search-input" bindinput="searchInput" auto-focus placeholder="志愿服务，乡村振兴"/></view> 
+    </view>
+    <view class="select" bindtap="searchTap" wx:if="searchFlag" >搜索</view>
+</view>
+
+<view class="choose-list">
+    <view class="choose" bindtap="all">全部</view>
+    <view class="choose" >地区 
+    <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}" range-key="name">
+    <image src="/images/down.png"></image>
+    </picker>
+        
+    </view>
+    <view class="choose">类型 
+    <picker mode="selector" bindchange="bindCatePickerChange" value="{{cateIndex}}" range-key="cate" range="{{cateArray}}">
+    <image src="/images/down.png"></image>
+    </picker>
+    </view>
+    <!-- 排序分热度、时间、福利等 -->
+    <view class="choose">排序 
+    <picker mode="selector" bindchange="bindsortPickerChange" value="{{sortIndex}}" range-key="sort" range="{{sortArray}}">
+    <image src="/images/down.png"></image>
+    </picker>
+        
+    </view>
+</view>
+
+
+<view class="activities-list">
+    <view wx:if="{{projectList.length == 0}}" class="nullProject">暂无活动</view>
+     <block wx:for="{{projectList}}" wx:key="index">
+     <view class="activities-box" data-index="{{index}}" bindtap="jumpActInfo">
+        <!--每个project-->
+         <!--活动图片-->
+        <view class="projectImageView">
+            <image class="image" src="{{item.pic}}"></image> 
+        </view>
+
+        <view class="right">
+            <!--活动名称-->
+            <view class = 'projectNameView'>{{item.projectName}}</view>
+            <!--活动简介-->
+            <!-- <view class="projectDecsView">
+            <text class='projectDecsText'>{{item.projectDecs}}</text>
+            </view> -->
+            <!--发布组织-->
+            <view class="organization" style="color: #666666; font-size: 30rpx;">{{item.organization}}</view>
+
+            <view class="down">
+                <!--报名截止时间/活动开始时间-->
+                <view class="projectStartDateView">报名截止:{{item.projectStartDate}}</view>
+                <!--活动结束时间-->
+                <!-- <view class="projectEndDateView">
+                <text class='projectLocalText'>结束时间:{{item.projectEndDate}}</text>
+                </view> -->
+                <!--活动关注度-->
+                <view class="projectEndDateView">
+                    <image src="/images/hot.png"></image>
+                    <text>{{item.projectAttention}}</text>
+                </view>
+            </view>
+            
+        </view>
+    
+
+
+
+     </view>
+     
+   </block>
+</view>
+

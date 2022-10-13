@@ -1,0 +1,8 @@
+{
+    "component": true,
+    "navigationBarTextStyle": "white",
+    "navigationBarBackgroundColor": "#e56f4b",
+    "usingComponents": {},
+    "navigationBarTitleText":"活动列表"
+    
+}

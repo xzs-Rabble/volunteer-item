@@ -1,0 +1,8 @@
+{
+    "usingComponents": {},
+    "backgroundColor": "#CD3333",
+    "navigationBarTextStyle": "white",
+    "navigationBarBackgroundColor": "#e56f4b",
+    "lazyCodeLoading": "requiredComponents",
+    "navigationBarTitleText": "消息"
+}

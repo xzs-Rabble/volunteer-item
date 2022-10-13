@@ -1,0 +1,132 @@
+<view class="top-title">
+    <view class="top_lbt">
+        <swiper circular="true" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" >
+            <block wx:for="{{imgUrls}}" wx:key="index">
+                <swiper-item style="border-radius: 15rpx;">
+                    <image src="{{item}}" class="slide-image" />
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+
+    <view class="top-bg">
+        <scroll-view class="major" scroll-x>
+                <navigator class="box" url="/pages/doVolunteer/doVolunteer" open-type="switchTab">
+                        <image class="icon" src="/images/recruit.png"></image>
+                        <view class="txt">做志愿</view>
+                </navigator>
+                <navigator class="box" url="/pages/sign_in/sign_in">
+                        <image class="icon" src="/images/sign-in.png"></image>
+                        <view class="txt">签到</view>
+                </navigator>
+                <navigator class="box" url="">
+                        <image class="icon" src="/images/organization.png"></image>
+                        <view class="txt">组织</view>
+                </navigator>
+                <navigator class="box" url="">
+                        <image class="icon" src="/images/education.png"></image>
+                        <view class="txt">科普教育</view>
+                </navigator>
+                <navigator class="box" url="">
+                        <image class="icon" src="/images/notice.png"></image>
+                    <view class="txt">公告</view>
+                </navigator>
+                <navigator class="box" url="">
+                        <image class="icon" src="/images/menu.png"></image>
+                        <view class="txt">菜单</view>
+                </navigator>
+                <navigator class="box" url="">
+                        <image class="icon" src="/images/find.png"></image>
+                    <view class="txt">自助查询</view>
+                </navigator>
+                <navigator class="box" url="">
+                        <image class="icon" src="/images/service.png"></image>
+                    <view class="txt">客服</view>
+                </navigator>
+        </scroll-view>
+    </view>
+    
+
+ </view>
+
+
+ <view class="body">
+        <view class="official">
+            <view class="body-head">
+                <image class="body-icon" src="/images/announcement.png"></image>
+                <view class="body-txt">官方资讯</view>
+                <view class="body-txt-more">更多 ></view>
+            </view>
+
+            <view class="official-major">
+                <view class="official-body" bindtap="guanfang">【资讯】2021河北“三支一扶”志愿者福利待遇
+                    <view class="official-type-time">
+                        <view class="official-type">资讯</view>
+                        <view class="official-time">04-30</view>
+                    </view>
+                </view>
+                <view class="official-body">【征集活动】南宁乡村志愿者征集开启,现在赶紧拨打
+                    <view class="official-type-time">
+                        <view class="official-type">活动</view>
+                        <view class="official-time">05-05</view>
+                    </view>
+                </view>
+            </view>
+            
+        </view>
+        
+        <view class="recommend">
+            <view class="body-head">
+                <image class="body-icon" src="/images/recommend.png"></image>
+                <view class="body-txt">推荐活动</view>
+                <view class="body-txt-more">更多 ></view>
+            </view>
+
+            <view class="activities-list">
+                <view wx:if="{{projectList.length == 0}}" class="nullProject">暂无活动</view>
+                <block wx:for="{{projectList}}" wx:key="index">
+                <view class="activities-box" data-index="{{index}}" bindtap="jumpActInfo">
+                    <!--每个project-->
+                    <!--活动图片-->
+                    <view class="projectImageView">
+                        <image class="image" src="{{item.pic}}"></image> 
+                    </view>
+
+                    <view class="right">
+                        <!--活动名称-->
+                        <view class = 'projectNameView'>{{item.projectName}}</view>
+                        <!--活动简介-->
+                        <!-- <view class="projectDecsView">
+                        <text class='projectDecsText'>{{item.projectDecs}}</text>
+                        </view> -->
+                        <!--发布组织-->
+                        <view class="organization" style="color: #666666; font-size: 30rpx;">{{item.organization}}</view>
+
+                        <view class="down">
+                            <!--报名截止时间/活动开始时间-->
+                            <view class="projectStartDateView">报名截止:{{item.projectStartDate}}</view>
+                            <!--活动结束时间-->
+                            <!-- <view class="projectEndDateView">
+                            <text class='projectLocalText'>结束时间:{{item.projectEndDate}}</text>
+                            </view> -->
+                            <!--活动关注度-->
+                            <view class="projectEndDateView">
+                                <image src="/images/hot.png"></image>
+                                <text>{{item.projectAttention}}</text>
+                            </view>
+                        </view>
+                        
+                    </view>
+                
+
+
+
+                </view>
+                
+            </block>
+            </view>
+
+
+        </view>
+</view>
+

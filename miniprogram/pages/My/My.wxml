@@ -1,0 +1,118 @@
+
+
+
+<view class="top">
+    <!-- 登录前 -->
+    <view wx:if="{{userInfo == null || quit_state == true}}" class="before-login" bindtap="getUserInfo">
+        <view class="default-box">
+            <image src="/images/default.png" class="default-image"></image>
+            <view class="defalut-txt">请点击登录</view>
+        </view>
+    </view>
+
+    <!-- 登陆后 -->
+    <view wx:if="{{userInfo != null && quit_state == false}}" class="after-login">
+        <view class="head">
+            <!-- 获取用户头像 -->
+            <image class="user-image" src="{{userInfo.avatarUrl}}"></image>
+            <!-- 获取用户昵称 -->
+            <view class="user-txt">
+                <view class="user-name">{{userInfo.nickName}}</view>
+                <view class="user-lv">LV.{{userInfo.user_grade}}</view>
+            </view>
+        </view>
+
+
+        <view class="foot">
+            <view class="foot-body">
+                <view class="foot-txt">服务时长</view>
+                <view class="foot-num">{{userInfo.Service_time}}</view>
+            </view>
+            <image src="/images/split.png"></image>
+            <view class="foot-body">
+                <view class="foot-txt">信誉分</view>
+                <view class="foot-num">{{userInfo.credit_score}}</view>
+            </view>
+        </view>
+    </view>
+    
+    
+
+</view>
+
+<view class="money">
+    <view class="money-up">
+        <view class="money-up-txt">志愿积分</view>
+        <view class="money-up-value">
+            <image src="/images/money.png"></image>
+            <view wx:if="{{userInfo == null || quit_state == true}}" class="money-up-num"></view>
+            <view wx:if="{{userInfo != null && quit_state == false}}" class="money-up-num">{{userInfo.user_integral}}</view>
+        </view>
+        <view class="money-up-null"></view>
+    </view>
+
+    <view class="money-down">
+        <view class="money-down-get1" bindtap="btn_getmoney">
+            <image src="/images/money-bag.png"></image>
+            <view class="money-down-txt">获取积分</view>
+        </view>
+        <view class="money-down-get2" bindtap="btn_shop">
+            <image src="/images/shop.png"></image>
+            <view class="money-down-txt">兑换商店</view>
+        </view>
+    </view>
+
+</view>
+
+<view class="body">
+    <view class="list-box">
+        <view wx:if="{{userInfo.user_identity == 0}}" class="admin-list" bindtap="btn_admin" >
+            <image  class="list-icon" src="/images/admin.png"></image>
+            <view class="list-txt">管理员操作</view>
+            <view class="list-right">＞</view>
+        </view>
+        <view class="list" bindtap="btn_index">
+            <image  class="list-icon" src="/images/user-info.png"></image>
+            <view class="list-txt">个人信息</view>
+            <view class="list-right">＞</view>
+        </view>
+        <view class="list" bindtap="btn_activity">
+            <image  class="list-icon" src="/images/acticity.png"></image>
+            <view class="list-txt">我的活动</view>
+            <view class="list-right">＞</view>
+
+        </view>
+        <view class="list">
+            <image  class="list-icon" src="/images/record.png"></image>
+            <view class="list-txt">浏览历史</view>
+            <view class="list-right">＞</view>
+        </view>
+        
+        <view class="list">
+            <image  class="list-icon" src="/images/certificate.png"></image>
+            <view class="list-txt">志愿者证</view>
+            <view class="list-right">＞</view>
+        </view>
+        <view class="list">
+            <image  class="list-icon" src="/images/award.png"></image>
+            <view class="list-txt">我的奖品</view>
+            <view class="list-right">＞</view>
+        </view>
+        <view class="list">
+            <image  class="list-icon" src="/images/address.png"></image>
+            <view class="list-txt">管理收货地址</view>
+            <view class="list-right">＞</view>
+        </view>
+        <view class="list">
+            <image  class="list-icon" src="/images/rece-user.png"></image>
+            <view class="list-txt">联系客服</view>
+            <view class="list-right">＞</view>
+        </view>
+        <view class="list" bindtap="btn_system">
+            <image  class="list-icon" src="/images/setting.png"></image>
+            <view class="list-txt">设置</view>
+            <view class="list-right">＞</view>
+        </view>
+    </view>
+
+</view>

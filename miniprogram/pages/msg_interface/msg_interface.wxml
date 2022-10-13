@@ -1,0 +1,81 @@
+<!--pages/contact/contact.wxml-->
+
+<view>
+
+<scroll-view scroll-y scroll-into-view='{{toView}}' style='height: {{scrollHeight}};' catchtap="voice_null_hidden">
+  <!-- <view class='scrollMsg'> -->
+  <block wx:key wx:for='{{msgList}}' wx:key="index">
+
+    <!-- 单个消息1 客服发出（左） -->
+    <view wx:if='{{item.speaker=="server"}}' id='msg-{{index}}' style='display: flex; padding: 2vw 11vw 2vw 2vw;'>
+      <view style='width: 11vw; height: 11vw;'>
+        <image style='width: 11vw; height: 11vw; border-radius: 10rpx;' src='{{serHeadIcon}}'></image>
+      </view>
+      <view style='width: 4vw; height: 11vw; margin-left: 0.5vw; display: flex; align-items: center; z-index: 9;'>
+        <image style='width: 4vw;' src='/images/msg_left.png' mode='widthFix'></image>
+      </view>
+      <view class='leftMsg'>{{item.content}}</view>
+    </view>
+
+    <!-- 单个消息2 用户发出（右） -->
+    <view wx:else id='msg-{{index}}' style='display: flex; justify-content: flex-end;'>
+        <!-- 文本 -->
+        <view data-value="{{item.content}}" bindtap="{{item.contentType == 'voice'?'playVoice':false}}" class="rightmsg_txt" wx:if="{{item.contentType == 'text' || item.contentType == 'voice'}}">
+            <view class='rightMsg'>
+                <text wx:if="{{item.contentType == 'text'}}">{{item.content}}</text>
+                <text wx:if="{{item.contentType == 'voice'}}">{{item.dur_Time}}"</text>
+                <image style="width: 48rpx;height: 48rpx;" wx:if="{{item.contentType == 'voice'}}" src="/images/wifi.png"></image>
+            </view>
+            <view style='width: 4vw; height: 11vw; margin-left: 0.5vw; display: flex; align-items: center; z-index: 9;'>
+                    <image style='width: 4vw;' src='/images/msg_right.png' mode='widthFix'></image>
+            </view>
+        </view>
+        <!-- 图片 -->
+        <image mode="widthFix" class="user_send_img" wx:if="{{item.contentType == 'img'}}" src="{{item.content}}"></image>
+        <!-- 视频 -->
+        <video custom-cache="{{false}}" controls="true" poster="https://p.ananas.chaoxing.com/star3/origin/e8f8aa7179d7c08113e78ad133d18cdd.png" class="user_send_video" wx:if="{{item.contentType == 'video'}}" src="{{item.content}}"></video>
+
+      <view style='width: 11vw; height: 11vw;'>
+        <!-- <image style='width: 11vw; height: 11vw; border-radius: 10rpx;' src='/images/msg_right.png'></image> -->
+        <image style='width: 11vw; height: 11vw; border-radius: 10rpx;' src='{{cusHeadIcon}}'></image>
+      </view>
+    </view>
+
+  </block>
+  <!-- </view> -->
+
+  <!-- 占位 -->
+  <view style='width: 100%; height: 18vw;'></view>
+</scroll-view>
+
+<view class='inputRoom' style="bottom: {{inputBottom}};">
+    <view style="display: flex; flex-direction: row; height: 50%;width: 100%; margin-top: 1%;">
+        <input bindinput="txt" bindconfirm='sendClick' adjust-position='{{false}}' value='{{inputVal}}' confirm-type='send' bindfocus='focus' bindblur='blur'></input>
+        <button bindtap="sendClick" class="btn_send" style="background-color: #e56f4b;width:140rpx;height: 70rpx; border-radius: 55rpx; font-size: 30rpx; color:#ffffff; padding: 15rpx;">发送</button>
+    </view>
+
+  <view class="icon">
+        <view class="icon_box" bindtap="btn_voice"><image src='/images/{{icon_voice}}.png'></image></view>
+        <view class="icon_box" bindtap="btn_pic"><image src="/images/icon_pic.png"></image></view>
+        <view class="icon_box" bindtap="btn_video"><image src="/images/icon_paizhao.png"></image></view>
+        <view class="icon_box"><image style="width: 55rpx; height: 55rpx;" src="/images/icon_fujian.png"></image></view>
+        <view class="icon_box"><image style="width: 55rpx; height: 55rpx;" src="/images/icon_Expression.png"></image></view>
+        <view class="icon_box"><image style="width: 50rpx; height: 50rpx;" src="/images/icon_add.png"></image></view>
+
+    </view>
+
+    <!-- 录音 -->
+    <view class="voice" wx:if="{{voiceHidden == true}}">
+        <view class="voice_box">
+            <view class="voice_txt" style="font-size: 33rpx;">{{voiceing_txt}}</view>
+            <view class="voice_image" style="margin-top: 10%;" capture-bind:touchstart="startVoice" capture-bind:touchend="stopVoice">
+                <image src="{{voicePic}}"></image>
+            </view>
+        </view>
+    </view>
+
+</view>
+
+    
+</view>
+

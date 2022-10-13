@@ -1,0 +1,230 @@
+
+.top-title{
+    width: 100%;
+    height: 670rpx;
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+.top_lbt{
+    width: 90%;
+    height: 45%;
+}
+.swiper {
+    height: 100%;
+    width: 100%;
+}
+.swiper-image {
+    height: 100%;
+    width: 100%;
+    
+}
+.slide-image{
+    height: 100%;
+    width: 100%;
+}
+.top-bg{
+    width: 100%;
+    height: 45%;
+}
+.major{
+    width: 98%;
+    height: 100%;
+    bottom: 3%;
+}
+.major .box{
+    width: 23%;
+    height: 45%;
+    text-align: center;
+    display: inline-block;
+    margin-left: 2%;
+    padding-top: 2%;
+
+}
+.major .box image{
+    width: 90rpx;
+    height: 90rpx;
+}
+.major .txt{
+    font-size: 28rpx;
+
+}
+
+
+.body{
+    margin-top: 2%;
+    height: 1400rpx;
+    background: f5f4f4;
+
+
+}
+.official{
+    width: 100%;
+    height: 30%;
+    background: rgb(255, 255, 255);
+    border-top-left-radius: 20rpx;
+    border-top-right-radius: 20rpx;
+    border-bottom: 1rpx solid #f1f0f0;
+}
+
+.body-head{
+    display: flex;
+    width: 100%;
+    height: 75rpx;
+    background: rgb(255, 255, 255);
+    padding-top: 30rpx;
+    padding-left: 30rpx;
+    
+}
+.official-major{
+    width: 100%;
+    height: 72%;
+    font-size: 32rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.official-body{
+    width: 90%;
+    height: 30%;
+    background-color: rgb(247, 247, 247);
+    border-radius: 15rpx;
+    margin-top: 2%;
+    padding-top: 3%;
+    padding-bottom: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.official-type-time{
+    height: 60%;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+.official-type{
+    width: 70rpx;
+    font-size: 28rpx;
+    color: white;
+    background-color: #eea95b;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5rpx;
+}
+.official-time{
+    font-size: 28rpx;
+    color: rgb(190, 190, 190);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-right: 2rpx;
+}
+.body-icon{
+    width: 48rpx;
+    height: 48rpx;
+}
+.body-txt{
+    width: 75%;
+    padding-left: 10rpx;
+    font-weight: bold;
+}
+.body-txt-more{
+    padding-top: 5rpx;
+    font-size: 28rpx;
+    color: rgb(154, 154, 155);
+}
+
+.recommend{
+    height: 70%;
+    background: rgb(255, 255, 255);
+    margin-top: 15rpx;
+}
+
+/*活动列表*/
+
+.activities-list{
+    width: 100%;
+}
+.activities-box{
+    width: 100%;
+    padding: 2%;
+    border-bottom: 1rpx solid rgb(189, 189, 189);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #fff;
+}
+.projectImageView{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.right{
+    width: 65%;
+    height: 80%;
+    margin-left: 2%;
+}
+
+.image{
+    width: 230rpx;
+    height: 150rpx;
+    border-radius: 20rpx;
+}
+ /* 活动名 */
+ .projectNameView{
+    width: 100%;
+    font-size: 34rpx;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.down{
+    margin-top: 2%;
+    width: 100%;
+    font-size: 30rpx;
+    display: flex;
+    flex-direction: row;
+    color: rgb(102, 102, 102);
+}
+.organization{
+    margin-top: 2%;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.projectStartDateView{
+    width: 80%;
+}
+
+.projectEndDateView{
+    width: 20%;
+}
+
+.projectEndDateView image{
+    width: 32rpx;
+    height: 32rpx;
+}
+.nullProject{
+    width: 100%;
+    height: 500rpx;
+    color: rgb(155, 155, 155);
+    opacity: 0.8;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}

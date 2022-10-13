@@ -1,0 +1,62 @@
+<view style="display: flex;flex-direction: column;justify-content: center;align-items: center;">
+    <view class="head">
+        <view class="head_img">
+            <image style='width: 128rpx; height: 128rpx; border-radius: 10rpx;' src='{{userInfo.avatarUrl}}'></image>
+            <!-- <image style='width: 128rpx; height: 128rpx; border-radius: 10rpx;' src='/images/default.png'></image> -->
+        </view>
+        <view class="head_txt">
+            <view class="head_txt_name">{{userInfo.user.auth_name}}</view>
+            <!-- <view class="head_txt_name">许泽森</view> -->
+            <picker range="{{organList}}" bindchange="changeOrgan" value="{{index}}">
+                <view class="organ">
+                    <view class="organ_name">{{organName}}</view>
+                    <view class="organ_selcet">
+                        <image style="width: 32rpx;height: 32rpx;" src="/images/organ_select.png"></image>
+                    </view>  
+                </view>
+            </picker>
+            
+        </view>
+    </view>
+
+    <view class="yiwen">
+        <image style="width: 64rpx;height: 64rpx;" src="/images/yiwen.png"></image>
+        <view style="margin-left: 3%; color: #e56f4b; font-size: 34rpx;width: 80%;">管理员操作界面常见问题</view>
+        <view style="color: #e56f4b; font-size: 34rpx;">></view>
+    </view>
+
+    <view class="body">
+        <view class="body_box"  bindtap="btn_addActivity">
+            <view class="body_img">
+                <image src="/images/publish_act.png" style="width: 96rpx;height: 96rpx;"></image>
+            </view>
+            <view class="body_box_name">发布活动</view>
+            <view class="body_box_beizhu">发布有关乡村</view>
+            <view class="body_box_beizhu">志愿活动</view>
+        </view>
+        <view class="body_box" bindtap="btn_interview">
+            <view class="body_img">
+                <image src="/images/admin_act.png" style="width: 96rpx;height: 96rpx;"></image>
+            </view>
+            <view class="body_box_name">活动审核</view>
+            <view class="body_box_beizhu">活动报名人数</view>
+            <view class="body_box_beizhu">/面试录取</view>
+        </view>
+        <view class="body_box" bindtap="btn_actAdmin">
+            <view class="body_img">
+                <image src="/images/interview.png" style="width: 96rpx;height: 96rpx;"></image>
+            </view>
+            <view class="body_box_name">活动管理</view>
+            <view class="body_box_beizhu">人员/活动状态</view>
+            <view class="body_box_beizhu">/导出报表</view>
+        </view>
+    </view>
+
+    <view class="body">
+        <view class="body_box" style="color: rgb(107, 107, 107);">开发中...</view>
+    </view>
+
+    
+</view>
+
+

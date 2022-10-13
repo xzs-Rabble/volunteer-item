@@ -1,0 +1,96 @@
+.head{
+    width: 100%;
+    height: 170rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+.head_img{
+    width: 20%;
+    display: flex;
+    align-items: center;
+}
+.head_txt{
+    width: 70%;
+    height: 80%;
+}
+.head_txt_name{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.organ{
+    width: 100%;
+    height: 50%;
+    color: rgb(131, 131, 131);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.organ_name{
+    width: 50%;
+}
+.organ_selcet{
+    width: 50%;
+}
+.yiwen{
+    padding-left: 3%; 
+    margin-top: 20rpx; 
+    background-color: #fff; 
+    width: 90%;
+    height: 100rpx;
+    border-radius: 20rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.body{
+    padding-left: 3%; 
+    margin-top: 20rpx; 
+    width: 90%;
+    height: 300rpx;
+    border-radius: 20rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.body_box{
+    width: 30%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 3%;
+    background-color: #fff;
+    border-radius: 20rpx;
+}
+.body_img{
+    width: 90%;
+    height: 35%;
+    display: flex;
+    justify-content: center;
+}
+.body_box_name{
+    width: 90%;
+    height: 20%;
+    color: #e56f4b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32rpx;
+}
+.body_box_beizhu{
+    width: 90%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 26rpx;
+    color: rgb(172, 172, 172);
+    word-break: break-all;
+}

@@ -1,0 +1,36 @@
+.body{
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 1px solid rgb(224, 224, 224);
+    height: 180rpx;
+}
+.name{
+    width: 50%;
+    padding: 3%;
+    font-size: 34rpx;
+}
+.money_time{
+    width: 40%;
+    color: rgb(105, 105, 105);
+    font-size: 30rpx;
+    flex-direction: column;
+    display: flex;
+}
+.money{
+    margin: auto;
+    margin-right: 10rpx;
+}
+.time{
+    margin: auto;
+    margin-right: 10rpx;
+    margin-top: 5%;
+}
+.end{
+    width: 8%;
+    color: rgb(105, 105, 105);
+    display: flex;
+    justify-content: center;
+}

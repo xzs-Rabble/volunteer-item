@@ -1,0 +1,61 @@
+<view class="body1">
+    <view class="head">
+        <image src="/images/pot.png"></image>
+        <view class="title">官方消息</view>
+    </view>
+
+    <view class="msg_box" data-i="{{1}}" bindtap="btn_offMsg">
+            <image src='/images/off_msg.png' style="width: 120rpx; height: 120rpx;"></image>
+            <view class="msg_box_txt">
+                <view class="msg_box_txt_top">
+                    <view class="msg_name">系统消息</view>
+                    <view class="msg_time">06-01</view>
+                </view>
+                <view class="msg_box_txt_down">
+                    <view style="width: 90%;">你已成功报名志愿活动...</view>
+                    <image wx:if="{{newMsg}}" style="width: 24rpx;height: 24rpx;" src="/images/pot.png"></image>
+                </view>
+            </view>
+    </view>
+    <view class="msg_box">
+            <image src="/images/small_head.png"></image>
+            <view class="msg_box_txt">
+                <view class="msg_box_txt_top">
+                    <view class="msg_name">志愿者小助手</view>
+                    <view class="msg_time">05-31</view>
+                </view>
+                <view class="msg_box_txt_down">欢迎您成为乡村志愿者！</view>
+            </view>
+    </view>
+</view>
+
+<view class="body2">
+    <view class="head">
+        <image src="/images/pot.png"></image>
+        <view class="title">聊天消息</view>
+    </view>
+
+    <view class="msg_list">
+        <view class="msg_box" bindtap="btn_toMsg" data-index="{{index}}">
+            <image src='{{friendList[0].pic}}'></image>
+            <view class="msg_box_txt">
+                <view class="msg_box_txt_top">
+                    <view class="msg_name">{{friendList[0].name}}</view>
+                    <view class="msg_time">06-22</view>
+                </view>
+                <view class="msg_box_txt_down">{{last_msg}}</view>
+            </view>
+        </view>
+
+        <view class="msg_box" bindtap="btn_toMsg" data-index="{{index}}">
+            <image src="/images/default.png"></image>
+            <view class="msg_box_txt">
+                <view class="msg_box_txt_top">
+                    <view class="msg_name">张三</view>
+                    <view class="msg_time">05-31</view>
+                </view>
+                <view class="msg_box_txt_down">暂无消息</view>
+            </view>
+        </view>
+    </view>
+</view>

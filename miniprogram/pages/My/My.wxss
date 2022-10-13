@@ -1,0 +1,207 @@
+.before-login{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.default-box{
+    position: absolute;
+    top: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.default-image{
+    width: 180rpx;
+    height: 180rpx;
+    
+}
+
+.top{
+    height: 450rpx;
+    background-image: url('https://p.ananas.chaoxing.com/star3/origin/ac57f7a387a6ef38656a1e85ed2e84a5.png');
+    background-size: 100% 100%;
+    border-bottom: 1rpx solid rgb(163, 161, 161);
+}
+.after-login{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.head{
+    height: 40%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    top: 25%;
+    position: absolute;
+    padding-left: 20%;
+}
+.user-image{
+    width: 150rpx;
+    height: 150rpx;
+    border-radius: 50%;
+}
+.user-txt{
+    margin-left: 5%;
+    padding-top: 6%;
+}
+.user-name{
+    font-size: 40rpx;
+    font-weight: bolder;
+}
+.user-lv{
+    width: 70rpx;
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    font-weight: bolder;
+    color: white;
+    font-size: 30rpx;
+    background-color: #eea95b;
+}
+
+.foot{
+    height: 30%;
+    width: 80%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+}
+.foot-body{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 34rpx;
+}
+.foot-num{
+    font-size: 32rpx;
+    padding-top: 3%;
+    color: rgb(131, 131, 131);
+}
+.foot image{
+    width: 10%;
+    height: 60%;
+    display: flex;
+    padding-top: 5%;
+}
+
+.money{
+    width: 100%;
+    height: 200rpx;
+    background-color: #fff;
+    margin-top: 2%;
+}
+.money-up{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.money-up-txt{
+    width: 22%;
+    font-weight: bolder;
+}
+.money-up-value{
+    width: 20%;
+    display: flex;
+    align-items: center;
+}
+.money-up-null{
+    width: 50%;
+}
+.money image{
+    width: 38rpx;
+    height: 38rpx;
+}
+.money-up-num{
+    font-size: 32rpx;
+    margin-left: 8%;
+    color: rgb(255, 230, 0);
+    font-weight: bolder;
+}
+.money-down{
+    width: 100%;
+    height: 65%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-left: 2%;
+}
+.money-down-get1{
+    width: 42%;
+    height: 80%;
+    background-color: rgb(245, 245, 245);
+    margin-right: 4%;
+    border-radius: 15rpx;
+    display: flex;
+    align-items: center;
+}
+.money-down-get2{
+    width: 42%;
+    height: 80%;
+    background-color: rgb(245, 245, 245);
+    margin-right: 4%;
+    border-radius: 15rpx;
+    display: flex;
+    align-items: center;
+}
+.money-down image{
+    width: 64rpx;
+    height: 64rpx;
+    margin-left: 10%;
+}
+.money-down-txt{
+    margin-left: 10%;
+}
+
+
+.body{
+    width: 100%;
+    height: 770rpx;
+    margin-top: 25rpx;
+}
+.admin-list{
+    font-size: 34rpx;
+    width: 100%;
+    height: 110rpx;
+    display: flex;
+    align-items: center;
+    margin-top: 10rpx;
+    background-color: #fff;
+}
+.admin-list image{
+    width: 48rpx;
+    height: 48rpx;
+    margin-left: 3%;
+}
+.list{
+    font-size: 34rpx;
+    width: 100%;
+    height: 110rpx;
+    /* border: 1rpx solid rgb(235, 235, 235); */
+    display: flex;
+    align-items: center;
+    margin-top: 10rpx;
+    background-color: #fff;
+}
+.list image{
+    width: 48rpx;
+    height: 48rpx;
+    margin-left: 3%;
+}
+.list-txt{
+    width: 78%;
+    padding-left: 3%;
+}
+.list-right{
+    color: rgb(211, 211, 209);
+    font-size: 50rpx;
+}

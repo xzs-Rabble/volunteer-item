@@ -1,0 +1,105 @@
+/* pages/contact/contact.wxss */
+
+page {
+    background-color: #f1f1f1;
+  }
+  
+  .inputRoom {
+    width: 100vw;
+    /* height: 20vw; */
+    border-top: 1px solid #cdcdcd;
+    background-color: #f1f1f1;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 20;
+  }
+  
+  input {
+    width: 76vw;
+    height: 9.33vw;
+    background-color: #fff;
+    border-radius: 40rpx;
+    margin-left: 2vw;
+    padding: 0 3vw;
+    font-size: 28rpx;
+    color: #444;
+  }
+  
+  .leftMsg {
+    font-size: 35rpx;
+    color: #444;
+    line-height: 7vw;
+    padding: 2vw 2.5vw;
+    background-color: #fff;
+    margin-left: -1.6vw;
+    border-radius: 10rpx;
+    z-index: 10;
+    margin-top: 2vw;
+  }
+.rightmsg_txt{
+    display: flex;
+    flex-direction: row;
+}
+  .rightMsg {
+    margin-top: 2vw;
+    font-size: 35rpx;
+    color: #fff;
+    background-color: #e56f4b;
+    border-radius: 10rpx;
+    margin-right: -1.8vw;
+    padding: 2vw 2vw 2vw 3vw;
+    display: flex;
+    flex-direction: row;
+  }
+.user_send_img{
+    width: 64rpx;
+    height: 64rpx;
+    margin-top: 2vw;
+}
+.user_send_video{
+    width: 200rpx;
+    height: 360rpx;
+    margin-top: 2vw;
+}
+.icon{
+    display: flex; 
+    flex-direction: row; 
+    justify-content: center;
+    width: 100%;
+    height: 30%;
+    align-items: center;
+    padding-left: 3%;
+    margin-top: 1%;
+}
+.icon image{
+    width: 64rpx;
+    height: 64rpx;
+}
+.icon_box{
+    width: 14%;
+    height: 100%;
+}
+.voice{
+    width: 100%;
+    height: 500rpx;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.voice_box{
+    width: 30%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.voice_box image{
+    width: 200rpx;
+    height: 200rpx;
+}
+  

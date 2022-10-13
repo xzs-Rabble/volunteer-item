@@ -1,0 +1,71 @@
+<view class="top">
+    <view class="top-body">
+        <view class="top_box1">
+            <view style="font-weight: bolder; font-size: 55rpx; margin-left: 8%; margin-right: 2%;">{{userInfo.user_integral}}</view>
+            <view>志愿积分</view>
+        </view>
+        <view class="top_box2">明细></view>
+    </view>
+
+    <view class="contant">
+        <view class="contant_top">
+            <image src="/images/spilt1.png"></image>
+            <view class="contant_top_txt">已累计签到
+            <text style="color: #eea95b;">{{userIntegral.daySum}}</text>
+            天</view>
+        </view>
+        <view class="contant_top_txt2">累计签到指定天数有额外奖励</view>
+        <!-- 日历年月 -->
+        <view class='calendar_title_layer_center'>
+            <view class="nowDtae_font60">{{year}}年{{month}}月</view>
+        </view>
+        <!-- 日历主体 -->
+        <view class='calendar'>
+            <view class='header'>
+                <view wx:for='{{date}}' wx:key='index' class='{{(index == todayIndex) && isTodayWeek ? "weekMark" : ""}} '>{{item}}
+                    <view></view>
+                </view>
+            </view>
+            <view class='date-box'>
+                <block wx:for='{{dateArr}}' wx:key='index'>
+                    <view  class='{{item.choose?"nowsDay":isToday == item.isToday ? "nowDay":""}}'>
+                        <view class='{{userIntegral.signinArr[index] == 1? "date-head2":(nowDay-1 != index?"date-head":isSignin == false ? "date-head1" : "date-head2")}}' data-year='{{year}}' data-month='{{month}}' data-datenum='{{item.dateNum}}'>
+                            <view>{{item.dateNum}}</view>
+                        </view>
+                    </view>
+                </block>
+            </view>
+        </view>
+
+       <button disabled="{{btn_disabled}}" bindtap="signin" class="btn_signin" hover-class="btn_signin2">{{btn_txt}}</button>
+
+    </view>
+    
+    <view class="adv">
+        <image src="cloud://cloud1-5g1wigbb95270d96.636c-cloud1-5g1wigbb95270d96-1306589612/integral_adv.jpeg"></image>
+    </view>
+    <!-- 累计任务 -->
+    <view class="task">
+        <view class="contant_top">
+            <image src="/images/spilt1.png"></image>
+            <view class="contant_top_txt">积分任务</view>
+        </view>
+
+        <view wx:for="{{taskArr}}" wx:key='index' class="task_list">
+            <image class="task_icon" src='../../images/task{{tasknumArr[index]}}.png'></image>
+            <view class="task_list_txt">
+                <view class="task_list_txt_top">本月累计签到{{tasknumArr[index]}}天</view>
+                <view class="task_list_txt_down">
+                    <text>+{{taskArr[index]}}</text>
+                    <image style="margin-left: 2%;margin-top: 1%;" src="/images/money.png"></image>
+                </view>
+                
+            </view>
+            <button style="background-color: {{btn_bg_color[index]}};width:150rpx;height: 80rpx; border-radius: 55rpx; font-size: 30rpx; color:{{btn_color[index]}}; padding: 19rpx;" class="task_btn" data-id="{{index}}" bindtap="getReward" disabled="{{after_task_btn[index]}}">{{taskBtn[index]}}</button>
+        </view>
+    
+    </view>
+
+</view>
+
+

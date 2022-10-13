@@ -1,0 +1,64 @@
+.act_box{
+    width: 100%;
+    height: 100rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 2%;
+    border-bottom: 1px solid #ccc;
+}
+.act_txt{
+    font-size: 32rpx;
+    font-weight: bolder;
+}
+.classify{
+    padding-left: 20rpx;
+    align-items: center;
+    justify-content: space-between;
+    width: 30%;
+    position:relative;
+    display: flex;
+    flex-direction: row;
+}
+.select_box_type{
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    right: 0rpx;
+    top:50rpx;
+    /* animation: myclassify 1s; */
+    overflow: hidden;
+  }
+  .select_one {
+    padding-left: 20rpx;
+    width: 100%;
+    height: 60rpx;
+    position: relatiave;
+    line-height: 60rpx;
+    border-bottom: 1px solid #ccc;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+.inputTxt{
+    width: 90%;
+    height: 85%;
+    border: 1rpx solid #ccc;
+    background-color: rgb(236, 236, 236);
+    border-radius: 10rpx;
+    margin-top: 2%;
+    padding: 2%;
+}
+.btn{
+    position: fixed; 
+    bottom: 0; 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5%;
+}
+.btn_check{
+    opacity: 0.8;
+}

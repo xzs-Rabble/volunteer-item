@@ -1,0 +1,152 @@
+.money{
+    width: 100%;
+    height: 100rpx;
+    background-color:white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.money-left{
+    width: 55%;
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(247, 247, 247);
+    border-radius: 10rpx;
+}
+.money-left-value{
+    width: 90%;
+    display: flex;
+    align-items: center;
+}
+
+.money image{
+    width: 58rpx;
+    height: 58rpx;
+}
+.money-left-num{
+    font-size: 50rpx;
+    margin-left: 2%;
+    color: rgb(255, 230, 0);
+    font-weight: bolder;
+}
+.money-down{
+    width: 30%;
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-left: 2%;
+    background-color: rgb(247, 247, 247);
+    border-radius: 10rpx;
+    margin-left: 5%;
+}
+.money-down-get1{
+    width: 95%;
+    height: 80%;
+    background-color: rgb(245, 245, 245);
+    margin-right: 4%;
+    border-radius: 15rpx;
+    display: flex;
+    align-items: center;
+}
+
+.money-down-txt{
+    font-size: 34rpx;
+    margin-left: 6%;
+}
+.banner {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 80rpx;
+    background: #fff;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    padding: 0 30rpx;
+    box-sizing: border-box;
+    border-top: 1rpx solid #f5f5f5;
+    border-bottom: 1rpx solid #f5f5f5;
+    z-index: 10;
+  }
+  
+  .banner scroll-view {
+    height: 100%;
+  }
+  
+  .sort {
+    position: relative;
+    display: inline-block;
+    font-size: 32rpx;
+    margin-right: 70rpx;
+    line-height: 80rpx;
+    height: 100%;
+  }
+  
+  scroll-view .sort:last-child {
+    margin-right: 0rpx;
+  }
+  
+  .choose {
+    color: #16BA98;
+  }
+  
+  .line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5rpx;
+    border-radius: 10rpx;
+    background: #16BA98;
+    animation: spread .3s;
+  }
+  
+  @keyframes spread {
+    0% {
+      width: 0;
+      left: 50%;
+    }
+  
+    100% {
+      width: 100%;
+      left: 0;
+    }
+  }
+
+.box{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.place {
+    margin-top: 3%;
+    margin-left: 3%;
+    width: 45%;
+    background-color: white;
+    border-radius: 10rpx;
+}
+.comm_pic{
+    width: 100%;
+    height: 300rpx;
+    background-size: 100% 100%;
+}
+.comm_name{
+    width: 100%;
+    font-size: 34rpx;
+    padding-left: 10rpx;
+}
+.comm_num{
+    padding: 3%;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+  

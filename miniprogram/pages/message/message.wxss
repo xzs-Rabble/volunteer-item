@@ -1,0 +1,86 @@
+.body1{
+    width: 100%;
+    height: 400rpx;
+    background-color: white;
+}
+.head{
+    width: 100%;
+    height: 100rpx;
+    display: flex;
+    align-items: center;
+    padding-left: 25rpx;
+
+}
+.title{
+    color: rgb(63, 65, 65);
+    padding-left: 20rpx;
+    font-size: 34rpx;
+}
+.body1 image{
+    width: 20rpx;
+    height: 20rpx;
+}
+.body2 image{
+    width: 20rpx;
+    height: 20rpx;
+}
+
+
+.body2{
+    width: 100%;
+    height: 1000rpx;
+    margin-top: 20rpx;
+    background-color: white;
+}
+.msg_list{
+    margin-top: 2%;
+}
+.msg_box{
+    width: 100%;
+    height: 140rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 2%;
+    padding-right: 2%;
+    
+    border-bottom: 1rpx solid rgb(238, 238, 238);
+}
+.msg_box image{
+    width: 120rpx;
+    height: 120rpx;
+    border-radius: 50%;
+}
+.msg_box_txt{
+    width: 80%;
+    height: 90%;
+    padding-left: 3%;
+}
+.msg_box_txt_top{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+}
+.msg_name{
+    width: 85%;
+
+}
+.msg_time{
+    width: 15%;
+
+    font-size: 28rpx;
+    color: rgb(170, 170, 170);
+}
+.msg_box_txt_down{
+    width: 100%;
+    height: 40%;
+    color: rgb(141, 141, 141);
+    font-size: 30rpx;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: flex;
+    align-items: center;
+}

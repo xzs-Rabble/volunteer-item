@@ -1,0 +1,18 @@
+.box{
+    width: 100%;
+    height: 100rpx;
+    background-color: rgb(255, 255, 255);
+    padding-left: 5%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 32rpx;
+    border-bottom: 1rpx solid #e2e2e2;
+}
+.box_left{
+    width: 85%;
+}
+.box_right{
+    color: #cccccc;
+    font-size: 32rpx;
+}

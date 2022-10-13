@@ -1,0 +1,26 @@
+.box{
+    width: 100%;
+    height: 100rpx;
+    border-bottom: 1rpx solid rgb(221, 221, 221);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 2%;
+    color: rgb(112, 112, 112);
+    font-size: 32rpx;
+}
+.box_name{
+    width: 20%;
+}
+
+.btn{
+    position: fixed; 
+    bottom: 0; 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5%;
+}
+.btn_check{
+    opacity: 0.8;
+}

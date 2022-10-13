@@ -1,0 +1,172 @@
+
+.body{
+    width: 100%;
+    height: 500rpx;
+    display: flex;
+    flex-direction: column;
+}
+.head{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(224, 224, 224);
+}
+.head_act_down{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+
+}
+.head_act_down_left{
+    width: 72%;
+}
+.type{
+    padding-top: 2%;
+    
+    padding-bottom: 2%;
+    display: flex;
+    flex-direction: row;
+    
+}
+.type_box{
+    color:rgb(255, 147, 6);
+    border: 1rpx solid rgb(255, 147, 6);
+    margin-left: 4%;
+    border-radius: 45rpx;
+    font-size: 30rpx;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+.head_act_down_time{
+    font-size: 32rpx;
+    padding-top: 2%;
+    width: 100%;
+    padding-left: 4%;
+    padding-bottom: 2%;
+    color: rgb(146, 146, 146);
+
+}
+.biaozhi{
+    font-size: 33rpx;
+    padding-top: 2%;
+    color: rgb(255, 255, 255);
+    border-radius: 50rpx 0 0 50rpx;
+    display: flex;
+    background-color: rgb(255, 147, 6);
+    align-items: center;
+    justify-content: center;
+    padding-left: 2%;
+    width: 28%;
+    height: 40%;
+    padding-bottom: 2%;
+}
+.act_pic{
+    width: 70%;
+    height: 60%;
+}
+.head_act_name{
+    width: 100%;
+    border-top: 1px solid rgb(224, 224, 224);
+    font-weight: bolder;
+    padding: 2%;
+    padding-left: 10%;
+}
+
+.tab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 33%;
+    height: 100%;
+}
+  
+.topTabSwiper {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    height: 80rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+  
+.topTabSwiper:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+  
+.tabBorer {
+    border-bottom: 1px solid rgb(255, 147, 6);
+    color: rgb(255, 147, 6);
+}
+  
+.swiper {
+    height: 1000rpx;
+    background-color: white;
+}
+.acticity_info{
+    
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.info{
+    width: 100%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    display: flex;
+    align-items: center;
+    padding-left: 3%;
+    font-size: 34rpx;
+    border-bottom: 1px solid rgb(231, 231, 231);
+}
+.info text{
+    margin-left: 3%;
+}
+
+.info image{
+    width: 32rpx;
+    height: 32rpx;
+}
+.top-bg{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(236, 236, 236);
+}
+.major{
+    width: 100%;
+    height: 35%;
+    background-color: #fff;
+}
+.major .box{
+    width: 23%;
+    height: 35%;
+    text-align: center;
+    display: inline-block;
+    margin-left: 8%;
+    padding-top: 4%;
+    
+}
+.major .box image{
+    width: 80rpx;
+    height: 80rpx;
+}
+.major .txt{
+    font-size: 28rpx;
+
+}
+.phone{
+    font-size: 30rpx;
+    width: 33%;
+    color: rgb(253, 181, 48);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left:5%;
+}

@@ -1,0 +1,79 @@
+<view style="position: relative;">
+    <view class="body">
+        <view class="head">
+            <image class="act_pic" src="{{actInfo.pic}}"></image>
+            <view class="head_act_name">{{actInfo.projectName}}</view>
+            <view class="head_act_down">
+                <view class="head_act_down_left">
+                    <view class="type">
+                        <view class="type_box">{{actInfo.projectKind}}</view>
+                        <view class="type_box">服务</view>
+                        <view class="type_box">乡村振兴</view>
+                    </view>
+                    <view class="head_act_down_time">报名截止：{{actInfo.projectStartDate}}</view>
+                </view>
+                
+                <view class="biaozhi" style="background-color: {{bg_color}}; color: {{font_color}};">{{state}}</view>
+            </view>
+        </view>
+        
+        <view class="acticity_info">
+            <view class="info-title">活动信息</view>
+            <view class="info">
+                <image src="/images/actInfo1.png"></image>
+                <text>发布组织：{{actInfo.organization}}</text>
+            </view>
+            <view class="info">
+                <image src="/images/actInfo2.png"></image>
+                <text>开始时间：{{actInfo.projectEndDate}}</text>
+            </view>
+            <view class="info">
+                <image src="/images/actInfo3.png"></image>
+                <text>持续时间(天/8小时)：{{actInfo.continue}}天</text>
+            </view>
+            <view class="info">
+                <image src="/images/actInfo4.png"></image>
+                <text>联系电话：{{actInfo.phone}}</text>
+            </view>
+            <view class="info">
+                <image src="/images/actInfo5.png"></image>
+                <text>活动地址：{{actInfo.city}}{{actInfo.projectLocal}}</text>
+            </view>
+            <view class="info">
+                <image src="/images/actInfo7.png"></image>
+                <text>积分奖励：{{actInfo.intergral}}</text>
+            </view>
+            <view class="info">
+                <image src="/images/actInfo6.png"></image>
+                <text>报名人数：{{people}}</text>
+            </view>
+        
+        </view>
+    
+    </view>
+
+    <view class="other">
+        <view class="info-title">其他</view>
+        <view class="other_txt">1、录取会有短信通知。</view>
+        <view class="other_txt">2、录取后请及时添加管理人员微信，把您拉进微信群，后续服务通知将在群内告知。</view>
+        <view class="other_txt">3、遵守纪律、听从相关管理人员指挥。</view>
+        <view class="other_txt">4、维护志愿者形象，使用文明用语，切勿与村民发生冲突。</view>
+        <view class="other_txt">5、该活动提供住宿、三餐，保证志愿者的日常生活需求。</view>
+        <view class="other_txt">6、如遇到困难或疑问及时向相关管理人员报告</view>
+    </view>
+
+    <view style="width: 100%;height: 120rpx;"></view>
+    
+    </view>
+    <view class="bottom_box" >
+        <view class="bb1" bindtap="btn_toMsg">
+            <image src="/images/comm.png"></image>
+            <view>资讯</view>
+        </view>
+        <view class="bb2" style="background-color: {{bg_color_txt}}; color: {{btn_txt_color}};" bindtap="btn_signup">{{state_txt}}</view>
+        <view class="bb1" bindtap="subTap">
+            <image src="/images/subs.png"></image>
+            <view>订阅</view>
+        </view>
+</view>
+

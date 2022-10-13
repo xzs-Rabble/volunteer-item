@@ -1,0 +1,17 @@
+<!-- <view wx:for="{{list}}" wx:key="index" class="body">
+    <view class="name">{{list[index].name}}</view>
+    <view class="money_time">
+        <view class="money">-{{list[index].price}}志愿积分</view>
+        <view class="time">{{time}}</view>
+    </view>
+    <view>></view>
+</view> -->
+<view wx:for="{{list}}" wx:key="index" data-index="{{index}}" class="body" bindtap="indentInfo">
+    <view class="name">{{list[index].name}}</view>
+    <view class="money_time">
+        <view class="money">
+        <text style="color: rgb(255, 208, 0);">-{{list[index].price}}</text>志愿积分</view>
+        <view class="time">{{time}}</view>
+    </view>
+    <view class="end">></view>
+</view>

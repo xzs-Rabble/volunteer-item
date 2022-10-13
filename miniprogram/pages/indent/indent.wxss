@@ -1,0 +1,6 @@
+.txt{
+    width: 100%;
+    padding: 5%;
+    background-color: white;
+    font-size: 34rpx;
+}

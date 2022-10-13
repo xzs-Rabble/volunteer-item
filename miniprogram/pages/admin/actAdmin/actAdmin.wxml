@@ -1,0 +1,48 @@
+<view style="display: flex;align-items: center;flex-direction: column;">
+    <view class="select">
+        <image style="width: 32rpx;height: 32rpx;" src="/images/select.png"></image>
+        <view>搜索</view>
+    </view>
+
+
+    <view class="actList" wx:for="{{actList}}" wx:key="index" bindtap="goIntoAct" data-index="{{index}}">
+        <view class="actList_top">
+            <view class="act_pic">
+            <image style="width: 108rpx;height: 108rpx;border-radius: 20rpx;" src='{{item.pic}}'></image>
+            </view>
+            <view class="act_txt">
+                <view style="padding: 10rpx 20rpx 10rpx 15rpx;font-size: 34rpx;">{{item.projectName}}</view>
+                <view style="color: rgb(119, 119, 119); padding: 5rpx 20rpx 10rpx 15rpx; padding-left: 15rpx;">{{item.organization}}</view>
+            </view>
+            <view class="act_state">
+                <image wx:if="{{item.state == 0}}" style="width: 128rpx;height: 128rpx;" src='/images/acting.png'></image>
+                <image wx:if="{{item.state == 1}}" style="width: 128rpx;height: 128rpx;" src='/images/actend.png'></image>
+            </view>
+        </view>
+        
+
+        <view class="actList_down">
+            {{item.projectDecs}}
+        </view>
+    </view>
+
+    <!-- <view class="actList" wx:for="{{2}}" wx:key="index">
+        <view class="actList_top">
+            <view class="act_pic">
+            <image style="width: 108rpx;height: 108rpx;border-radius: 20rpx;" src='/images/acting.png'></image>
+            </view>
+            <view class="act_txt">
+                <view style="padding: 10rpx 20rpx 10rpx 15rpx;font-size: 34rpx;">444444444</view>
+                <view style="color: rgb(119, 119, 119); padding: 5rpx 20rpx 10rpx 15rpx; padding-left: 15rpx;">4444444444</view>
+            </view>
+            <view class="act_state">
+                <image style="width: 128rpx;height: 128rpx;" src="/images/acting.png"></image>
+            </view>
+        </view>
+        
+
+        <view class="actList_down">
+            4444444444444
+        </view>
+    </view> -->
+</view>

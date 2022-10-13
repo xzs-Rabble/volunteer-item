@@ -1,0 +1,21 @@
+<view style="display: flex;flex-direction: column; align-items: center;background-color: white;">
+    <view style="font-size: 50rpx; width: 90%;padding: 5%;word-break: break-all;text-indent: 58rpx;display: block;">
+    <view>【资讯】2021河北“三支一扶”志愿者福利待遇</view>
+    </view>
+    <view style="line-height: 64rpx; font-size: 34rpx; width: 90%;padding: 5%;word-break: break-all;text-indent: 58rpx;display: block;">
+        <view>为做好2021年高校毕业生到基层从事支教、支农、支医、帮扶乡村振兴等相关领域服务工作(简称“三支一扶”计划),报名时间为2021年7月12日9:00至7月16日17:00,笔试时间为2021年7月25日，以下为2021河北“三支一扶”志愿者1300名待遇信息：</view>
+    </view>
+
+    <view style="line-height: 64rpx; font-size: 34rpx; width: 90%;padding: 5%;word-break: break-all;text-indent: 58rpx;display: block;">
+        <view style="font-weight: bolder;">(一)“三支一扶”志愿者服务期限为2年，服务期满后不再续聘。</view>
+        <view>服务期间，每人每月的生活补贴分别为专科生志愿者3000元、本科生志愿者3200元、研究生志愿者3400元(经住院医师规范化培训合格的本科学历临床医师参加服务，生活补贴按照研究生志愿者对待)。给予新招募且在岗服务满6个月的志愿者一次性安家费3000元。按有关规定为志愿者办理服务期内的养老、医疗、工伤保险。各项保险的单位缴费部分由省三支一扶工作协调管理办公室负责缴纳，个人缴费部分在志愿者生活补贴中代扣代缴。</view>
+    </view>
+
+    <view style="line-height: 64rpx; font-size: 34rpx; width: 90%;padding: 5%;word-break: break-all;text-indent: 58rpx;display: block;">
+        <view style="font-weight: bolder;">(二)服务时间满1年且年度考核合格的“三支一扶”志愿者，可按规定参加职称评定。</view>
+        <view>服务期满且考核合格的“三支一扶”志愿者，根据有关规定，可参加县乡基层事业单位专项招聘;在参加省市事业单位公开招聘时，同等条件下应优先聘用;在县(市、区)及以下事业单位有空编、单位需要的前提下，经考核合格可直接聘用为事业单位工作人员。</view>
+        
+    </view>
+    
+</view>
+

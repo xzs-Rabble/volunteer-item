@@ -1,0 +1,50 @@
+<view class="money">
+    <view class="money-left">
+        <view class="money-left-value">
+            <image src="/images/money.png"></image>
+            <view class="money-left-num">{{userInfo.user_integral}}</view>
+        </view>
+    </view>
+    <view class="money-down">
+        <view class="money-down-get1" bindtap="indent">
+            <!-- <image src="/images/money-bag.png"></image> -->
+            <view class="money-down-txt">兑换记录</view>
+        </view>
+    </view>
+</view>
+
+<view class="banner">
+  <scroll-view scroll-x="true" scroll-with-animation="true" scroll-into-view="nav-{{select > 0 ? select -1 : select}}">
+    <view  wx:for="{{sortList}}" wx:for-index="index" wx:key="index" id="nav-{{index}}"
+      class="sort {{index == select ? 'choose' : ''}}" data-index='{{index}}' bindtap="activeTab">
+      {{item.name}}
+      <view class="line"  wx:if="{{index == select}}"></view>
+    </view>
+  </scroll-view>
+</view>
+<swiper style="height:{{height}}px" current="{{select}}" duration="300" bindchange="activeSw">
+  <swiper-item wx:for="{{sortList.length}}" wx:key="index">
+    <view class="box">
+      <view class="place" wx:for="{{placeList}}" wx:key="index">
+        <view class="comm_pic" style="background-image:url('{{placeList[index].pic}}');display: flex;flex-direction: row;">
+            <!-- <view style="display: flex;justify-content: center;height:40rpx; font-size: 28rpx; width: 30%;color: rgb(255, 255, 255); background-color: rgb(0, 136, 247);border-radius: 10rpx 0 10rpx 0;">{{placeList[index].stock}}库存</view>
+            <view style="width: 70%;"></view> -->
+        </view>
+        <view class="comm_name">
+        <text style="background-color: orange;color: white; border-radius: 10rpx;font-size: 30rpx;padding: 5rpx;">{{placeList[index].type}}</text>
+        {{placeList[index].name}}</view>
+        <view class="comm_num" style="color: rgb(160, 160, 160); font-size: 34rpx;">
+            <view class="comm_num_price" >
+            <text style="font-size: 40rpx;color: rgb(255, 220, 24);">{{placeList[index].price}}</text>
+            积分</view>
+            <button style="background-color: orange;width:100rpx;height: 60rpx; border-radius: 25rpx; font-size: 30rpx; color:white; padding: 10rpx;margin-right: 5%;"  bindtap="buy" data-index="{{index}}" data-price="{{placeList[index].price}}">兑换</button>
+        </view>
+      </view>
+    </view>
+  </swiper-item>
+</swiper>
+<view style="display: flex;justify-content: center; padding: 20rpx;align-items: center;">
+<view style="color: rgb(190, 190, 190);font-size: 30rpx;">已经到底咯~</view>
+</view>
+
+

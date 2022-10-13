@@ -1,0 +1,95 @@
+<view>
+    <view style="width: 100%;height: 420rpx;background-color: white">
+        <view style="position: relative; width: 100%;height: 100%;display: flex;justify-content: center;">
+            <image style="position: absolute;z-index: 0;  margin-top: 5%; width: 80%;height: 90%;" src="{{image}}"></image>
+            <view style="width: 25%;height: 16%; border-radius: 10rpx;background-color: rgb(110, 110, 110); position: absolute;z-index: 1;right: 15%;bottom: 5%;color: white;opacity: 0.7;justify-content: center;align-items: center;display: flex;font-size: 34rpx;letter-spacing: 5rpx;" bindtap="chooseImage">编辑封面</view>
+        </view>
+    </view>
+
+    <view style="width: 100%;background-color: white;">
+        <view class="act_box">
+            <text style="color: red;">*</text>
+            <text class="act_txt">活动名称：</text>
+            <input maxlength="15" type="text" bindinput="actNameAction" style="width: 70%;" placeholder="请输入活动名"></input>
+        </view>
+        <view class="act_box">
+            <view style="color: red;">*</view>
+            <view class="act_txt">活动类型：</view>
+            <!-- 下拉框 -->
+            <view class='classify' bindtap="bindType">
+                <view style="margin-right: 3%;" >{{myType}}</view>
+                <image style="width: 32rpx;height: 32rpx;" src="/images/down.png"></image>
+                <!-- 下拉列表 -->
+                <view class="select_box_type" wx:if="{{select_type}}">
+                    <view wx:for="{{typeList}}" wx:key="index">
+                        <view class="select_one" data-type="{{item}}" catchtap="myTypeSelect">{{item}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <picker value="{{index}}" range="{{organList}}" bindchange="changeOrgan">
+            <view class="act_box">
+                <view style="color: red;">*</view>
+                <view class="act_txt">发布组织：</view>
+                <view style="margin-right: 2%;">{{organ_name}}</view>
+                <image style="width: 32rpx;height: 32rpx;" src="/images/xuanze.png"></image>
+            </view>
+        </picker>
+        <picker placeholder="选择日期" start="2022-06-01" end="2023-01-01" value="{{date1}}" mode="date" bindchange="changeBMtime">
+            <view class="act_box">
+                <view style="color: red;">*</view>
+                <view class="act_txt">报名截止时间：</view>
+                <view style="margin-right: 2%;">{{date1}}</view>
+                <image style="width: 32rpx;height: 32rpx;" src="/images/xuanze.png"></image>
+            </view>
+        </picker>
+        <picker start="2022-01-01" end="2023-01-01" value="{{date3}}" mode="date" bindchange="changeHDKStime">
+            <view class="act_box">
+                <view style="color: red;">*</view>
+                <view class="act_txt">活动开始时间：</view>
+                <view style="margin-right: 2%;">{{date3}}</view>
+                <image style="width: 32rpx;height: 32rpx;" src="/images/xuanze.png"></image>
+            </view>
+        </picker>
+        <picker start="2022-01-01" end="2023-01-01" value="{{date2}}" mode="date" bindchange="changeHDJZtime">
+            <view class="act_box">
+                <view style="color: red;">*</view>
+                <view class="act_txt">活动截止时间：</view>
+                <view style="margin-right: 2%;">{{date2}}</view>
+                <image style="width: 32rpx;height: 32rpx;" src="/images/xuanze.png"></image>
+            </view>
+        </picker>
+        <view class="act_box">
+            <text style="color: red;">*</text>
+            <text class="act_txt">电话：</text>
+            <input  maxlength="15" type="number" bindinput="actPhoneAction" style="width: 50%;" placeholder="请输入联系方式"></input>
+            <view style="color: red;">{{phoneToast}}</view>
+        </view>
+        <picker value="{{region}}" mode="region" bindchange="changeRegion">
+            <view class="act_box">
+                <view style="color: red;">*</view>
+                <view class="act_txt" >活动所在地：</view>
+                <view wx:if="{{data3==''}}">请选择省/市/区</view>
+                <view style="margin-right: 2%;" wx:if="{{data3!=''}}">{{data3[0]}}{{data3[1]}}{{data3[2]}}</view>
+                <image style="width: 32rpx;height: 32rpx;" src="/images/xuanze.png"></image>
+            </view>
+        </picker>
+        <view class="act_box">
+            <text style="color: red;">*</text>
+            <text class="act_txt">志愿积分：</text>
+            <input maxlength="3" type="number" bindinput="intergralAction" style="width: 70%;" placeholder="请输入奖励积分"></input>
+        </view>
+        <view style=" width: 100%;height: 500rpx;padding: 2%;display: flex;flex-direction: column;">
+            <text class="act_txt">备注：</text>
+            <view style="width: 96%;height: 75%;margin-top: 1%; display: flex;justify-content: center;">
+                <textarea bindinput="remarkInputAction" maxlength="120" class="inputTxt" auto-focus="true"></textarea>
+            </view>
+            
+        </view>
+        
+    </view>
+
+    <view class="btn">
+        <button disabled="{{state}}" hover-class="btn_check" bindtap="btn_save" style="background-color: {{btn_color}}; color: {{btn_txt_color}}; border-radius: 20rpx;">发布</button>
+    </view>
+</view>

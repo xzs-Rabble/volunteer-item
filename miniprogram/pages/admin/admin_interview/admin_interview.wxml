@@ -1,0 +1,76 @@
+<view>
+<view class="select">
+    <view bindtap="exportExcel" style="background-color: #fdb530; border-radius: 20rpx; margin-right: 2%; color: #fff; width: 25%;height: 50%; display: flex;flex-direction: row;align-items: center;justify-content: center;">
+        <image src="/images/export.png" style="width: 48rpx;height: 48rpx;"></image>
+        <text>导出报表</text>
+    </view>
+
+    <view class="select_1">
+        <image style="width: 32rpx;height: 32rpx;" src="/images/select.png"></image>
+        <view>搜索</view>
+    </view>
+</view>
+<!-- 标题 -->
+<view class="title">
+    <view style=" width: 20%;">姓名</view>
+    <view style="display: flex;justify-content: center; width: 40%;">活动</view>
+    <view style="display: flex;justify-content: center; width: 30%;">手机号</view>
+</view>
+
+<!-- 数据列表 -->
+<view wx:for="{{peopleList}}" wx:key="index" wx:if="{{item.state==0}}" >
+  <view style="display: flex;flex-direction: row;align-items: center; padding: 10rpx; width:100%;height:80rpx;font-size: 33rpx;background-color: #fff;">
+    <checkbox-group bindchange="checkboxChange" data-index="{{index}}">
+      <checkbox class="fxk" style="float:left;" checked='{{item.checked}}'></checkbox>
+    </checkbox-group> 
+    <view style="float:left;width: 15%;"  data-i="{{index}}" bindtap="btn_userInfo">{{item.user_name}}</view>
+    <view class="actname"  data-i="{{index}}" bindtap="btn_userInfo">{{item.act_name}}</view>
+    
+    <view class="phone" bindtap="copy" data-phone="{{item.user_phone}}"><image style="width: 32rpx;height: 32rpx;" src="/images/copy.png"></image>
+    {{item.user_phone}}</view>
+  </view>
+</view>
+
+<view style="width:100%;height:1530rpx; background-color: #fff;" catchtap="hidden_info"></view>
+
+<!-- 底部功能 -->
+<view style="width: 100%;height: 130rpx;display: flex;position: fixed;bottom: 0;border-top: 1rpx solid rgb(195, 195, 196);background-color: white;flex-direction: row;align-items: center;padding-left: 5%;">
+    <!-- 全选 -->
+    <view style="width: 40%;">
+        <checkbox-group bindchange="selectAll">
+            <checkbox class="fxk" value="all" checked="{{checkedAll}}"></checkbox>全选
+        </checkbox-group>
+    </view>
+    
+
+    <view style="width: 30%;">
+        <button style="background-color: rgb(216, 216, 216);width:150rpx;height: 80rpx; border-radius: 55rpx; font-size: 30rpx; color:rgb(138, 138, 138); padding: 19rpx;" bindtap="refuse">拒绝</button>
+    </view>
+    <view>
+        <button style="background-color: rgb(255, 167, 34);width:150rpx;height: 80rpx; border-radius: 55rpx; font-size: 30rpx; color:white; padding: 19rpx;" bindtap="admit">录取</button>
+    </view>
+</view>
+
+<view wx:if="{{checkUser_state}}" style="width: 100%;height: 400rpx;position: fixed;bottom: 50%;display: flex;justify-content: center;align-items: center;">
+        <view class="pop_up">
+            <view style="font-weight: bolder; color: #585858; width: 100%;display: flex;flex-direction: row;height: 50%;">
+                <view style="width: 25%;height: 35%; background-color:{{checkUser.user_grade>=4?'#ff0000':'#fdb530'}} ;display: flex;align-items: center;justify-content: center;">
+                    <text style="color: white;">LV.{{checkUser.user_grade}}</text>
+                </view>
+                <view style="width: 55%;display: flex;justify-content: center; align-items: center;padding-top: 5%;">
+                    <image style="width: 120rpx;height: 120rpx;" src="/images/default.png"></image>
+                </view>
+                <text bindtap="hidden_info" style="font-size: 50rpx; width: 10%;display: flex;justify-content: center;">×</text>
+            </view>
+            <view class="pop_up_txt">
+                    <text class="pop_up_title">姓名：</text>
+                    <text class="pop_up_info">{{checkUser.user_name}}</text>
+            </view>
+            <view class="pop_up_txt">
+                    <text class="pop_up_title">志愿时长：</text>
+                    <text class="pop_up_info">{{checkUser.user_severtime}}</text>
+            </view>
+        </view>
+</view>
+</view>
+

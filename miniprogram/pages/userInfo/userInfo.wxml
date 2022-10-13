@@ -1,0 +1,43 @@
+<view>
+    <view class="box">
+        <view class="box_name">真实姓名</view>
+        <input placeholder="{{user.auth_name}}" class="input" type="text" disabled="{{state}}"></input>
+    </view>
+    <view class="box">
+        <view class="box_name">性别</view>
+        <input placeholder="{{user.sex}}" class="input" type="text" disabled="{{state}}"></input>
+    </view>
+    <view class="box">
+        <view class="box_name">证件类型</view>
+        <input placeholder="{{user.id_card_type}}" class="input" type="text" disabled="{{state}}"></input>
+    </view>
+    <view class="box">
+        <view class="box_name">身份证号</view>
+        <input placeholder="{{user.id_num}}" class="input" type="text" disabled="{{state}}"></input>
+    </view>
+    <view class="box">
+        <view class="box_name">到期日期</view>
+        <input placeholder="{{user.overdue}}" class="input" type="text" disabled="{{state}}"></input>
+    </view>
+    <view class="box">
+        <view class="box_name">民族</view>
+        <input placeholder="{{user.ethnic}}" class="input" type="text" disabled="{{state}}"></input>
+    </view>
+    <view class="box">
+        <view class="box_name">手机号码</view>
+        <input placeholder="{{user.phone}}" class="input" type="text" disabled="{{state}}"></input>
+    </view>
+    <view class="box">
+        <view class="box_name">政治面貌</view>
+        <input placeholder="{{user.politics}}" class="input" type="text" disabled="{{state}}"></input>
+    </view>
+    <view class="box">
+        <view class="box_name">籍贯</view>
+        <input placeholder="{{user.origin}}" class="input" type="text" disabled="{{state}}"></input>
+    </view>
+    
+    <view class="btn">
+        <button wx:if="{{state == false}}" hover-class="btn_check" bindtap="btn_save" style="background-color: #ffbb00; color: white; border-radius: 20rpx;">保存</button>
+    </view>
+    
+</view>

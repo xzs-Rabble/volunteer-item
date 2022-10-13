@@ -1,0 +1,29 @@
+<view>
+    <view class="box" style="margin-top: 2%;">
+        <view class="box_left">账号安全</view>
+        <view class="box_right">></view>
+    </view>
+    <view class="box" bindtap="clearHC">
+        <view class="box_left" style="width: 78%;">清除缓存</view>
+        <view class="box_right">{{myStorage}}KB></view>
+    </view>
+    <view class="box">
+        <view class="box_left">建议与反馈</view>
+        <view class="box_right">></view>
+    </view>
+
+    <view class="box" style="margin-top: 2%;">
+        <view class="box_left">检查更新</view>
+        <view class="box_right">></view>
+    </view>
+    <view class="box">
+        <view class="box_left">关于我们</view>
+        <view class="box_right">></view>
+    </view>
+    <view class="box" style="margin-top: 2%;" bindtap="cancellation">
+        <view class="box_left">注销</view>
+        <view class="box_right">></view>
+    </view>
+
+    <view bindtap="quit" style="background-color: white; width: 100%;height: 100rpx;display: flex;align-items: center;justify-content: center;margin-top: 3%;font-size: 34rpx;">退出登录</view>
+</view>

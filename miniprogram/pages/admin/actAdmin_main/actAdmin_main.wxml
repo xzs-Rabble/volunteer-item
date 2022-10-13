@@ -1,0 +1,123 @@
+<view style="display: flex;flex-direction: column;">
+    <view class="body">
+        <view class="head">
+            <image class="act_pic" src="{{actInfo.pic}}"></image>
+            <view class="head_act_name">{{actInfo.projectName}}</view>
+            <view class="head_act_down">
+                <view class="head_act_down_left">
+                    <view class="type">
+                        <view class="type_box">{{actInfo.projectKind}}</view>
+                        <view class="type_box">服务</view>
+                        <view class="type_box">乡村振兴</view>
+                    </view>
+                    <view class="head_act_down_time">活动截止：{{hdTime}}</view>
+                </view>
+                
+                <view class="biaozhi" style="background-color: {{bg_color}}; color: {{font_color}};">{{actInfo.state == 1?"活动已结束":"活动进行中"}}</view>
+            </view>
+        </view>
+    
+    </view>
+
+    <view class='topTabSwiper'>
+        <view class='tab  {{currentData == 0 ? "tabBorer" : ""}}'  data-current = "0" bindtap='checkCurrent'>信息</view>
+        <view class='tab  {{currentData == 1 ? "tabBorer" : ""}}'  data-current = "1" bindtap='checkCurrent'>功能</view>
+        <view class='tab  {{currentData == 2 ? "tabBorer" : ""}}'  data-current = "2" bindtap='checkCurrent'>成员</view>
+    </view>
+    <swiper current="{{currentData}}" class='swiper'  duration="300" bindchange="bindchange">
+        <!-- 1 -->
+        <swiper-item>
+            <view class="acticity_info">
+                <view class="info" bindtap="updateOrgan">
+                    <image src="/images/actInfo1.png"></image>
+                    <text style="width: 80%;">发布组织：{{actInfo.organization}}</text>
+                    <text style="color: #ccc;">></text>
+                </view>
+                <picker range="{{['','','']}}" mode="date">
+                    <view class="info">
+                        <image src="/images/actInfo2.png"></image>
+                        <text style="width: 80%;">开始时间：{{bmTime}}</text>
+                        <text style="color: #ccc;">></text>
+                    </view>
+                </picker>
+                <picker range="{{dateList}}">
+                    <view class="info">
+                        <image src="/images/actInfo3.png"></image>
+                        <text style="width: 80%;">持续时间：{{actInfo.continue}}天</text>
+                        <text style="color: #ccc;">></text>
+                    </view>
+                </picker>
+                <view class="info">
+                    <image src="/images/actInfo4.png"></image>
+                    <text style="width: 80%;">联系电话：{{actInfo.phone}}</text>
+                    <text style="color: #ccc;">></text>
+                </view>
+                <picker range="{{['请选择省/市/去','','']}}" mode="region">
+                    <view class="info">
+                        <image src="/images/actInfo5.png"></image>
+                        <text style="width: 80%;">活动地址：{{actInfo.city}}{{actInfo.projectLocal}}</text>
+                        <text style="color: #ccc;">></text>
+                    </view>
+                </picker>
+                <view class="info">
+                    <image src="/images/actInfo7.png"></image>
+                    <text style="width: 80%;">积分奖励：{{actInfo.intergral}}</text>
+                    <text style="color: #ccc;">></text>
+                </view>
+                <view class="info">
+                    <image src="/images/actInfo6.png"></image>
+                    <text>报名人数：{{actInfo.people.length}}</text>
+                </view>
+            </view>
+        </swiper-item> 
+        <!-- 2 -->
+        <swiper-item>
+            <view class="top-bg">
+                <scroll-view class="major" scroll-x>
+                        <navigator class="box" url="">
+                                <image class="icon" src="/images/gg.png"></image>
+                                <view class="txt">公告</view>
+                        </navigator>
+                        <navigator class="box" url="">
+                                <image class="icon" src="/images/zl.png"></image>
+                                <view class="txt">资料</view>
+                        </navigator>
+                        <navigator class="box" url="">
+                                <image class="icon" src="/images/tz.png"></image>
+                                <view class="txt">通知</view>
+                        </navigator>
+                        <navigator class="box" url="">
+                                <image class="icon" src="/images/kq.png"></image>
+                                <view class="txt">考勤</view>
+                        </navigator>
+                        <navigator class="box" url="">
+                                <image class="icon" src="/images/fz.png"></image>
+                            <view class="txt">分组</view>
+                        </navigator>
+                        <navigator class="box" url="">
+                                <image class="icon" src="/images/tj.png"></image>
+                                <view class="txt">统计</view>
+                        </navigator>
+                </scroll-view>
+            </view>
+        </swiper-item>
+        <!-- 3 -->
+        <swiper-item>
+        <!-- 数据列表 -->
+            <view wx:for="{{actInfo.people}}" wx:key="index" style="margin-top: 15rpx;">
+                <view style="display: flex;flex-direction: row;align-items: center; padding: 15rpx; width:100%;height:128rpx;background-color: #fff;">
+                    <image style="width: 128rpx;height: 128rpx;" src='{{item.user_pic}}'></image>
+                    <view style="width: 65%;height: 100%;margin-left: 2%;display: flex;flex-direction: column;">
+                        <view style="height: 60%;font-size: 40rpx;display: flex;align-items: center;">{{item.user_name}}</view>
+                        <view style="height: 40%;font-size: 28rpx;color: rgb(184, 184, 184);">{{item.user_phone}}</view>    
+                    </view>
+                    <picker range="{{['-3','-2','-1','0','1','2','3']}}">
+                            <view style="color: rgb(253, 181, 48);font-size: 38rpx;">0分></view>
+                    </picker>
+                </view>
+            </view>
+        </swiper-item>  
+    </swiper>
+
+    
+</view>
