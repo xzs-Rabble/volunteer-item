@@ -8,18 +8,10 @@
 
 ## 部分效果图展示
 
-首页
-![Screenshot_20220622_224727_com tencent mm](https://user-images.githubusercontent.com/114422586/195542836-fe992499-436e-4290-a66f-3daa24e25bbc.jpg)
+首页、活动列表、个人登录
+![Screenshot_20220622_224727_com tencent mm](https://user-images.githubusercontent.com/114422586/195543411-7a5ec0f1-2490-472f-83bf-1f062e3b50c3.jpg)
 
-活动列表
-
-个人登录
-
-活动信息
-
-每日签到
-
-积分任务
+活动信息、每日签到、积分任务
 
 商品列表
 
