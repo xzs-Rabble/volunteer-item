@@ -1,0 +1,1 @@
+"E:\世界树\Tencent\微信web开发者工具\cli.bat" cloud functions deploy --e cloud1-5g1wigbb95270d96 --n quickstartFunctions --r --project "E:\university\专业\微信小程序\高校小程序比赛\volunteer" --report_first --report
